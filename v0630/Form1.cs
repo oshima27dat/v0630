@@ -43,8 +43,10 @@ namespace v0630
             {
                 vy = -Math.Abs(vy);
             }
-
-
+            if((label1.Left <= fpos.X)&&(label1.Right>fpos.X)&&(label1.Top<=fpos.Y)&&(label1.Bottom>fpos.Y))
+            {
+                timer1.Enabled = false;
+            }
         }
 
         private void label2_Click(object sender, EventArgs e)

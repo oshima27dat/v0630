@@ -12,10 +12,14 @@ namespace v0630
 {
     public partial class Form1 : Form
     {
-        int vx = -5, vy = -10;
+        int vx = rand.Next(-10,11), vy = rand.Next(-10,11);
+        //静的=最初に決めておく <> 動的=実行時に変更可能
+        static Random rand = new Random();
         public Form1()
         {
             InitializeComponent();
+            label1.Left = rand.Next(0,ClientSize.Width);
+            label1.Top = rand.Next(0,ClientSize.Height);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
